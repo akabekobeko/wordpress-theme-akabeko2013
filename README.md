@@ -1,4 +1,10 @@
-wordpress-theme-akabeko2013
-===========================
+# akabeko2013
 
-My WordPress theme for akabeko.me/blog
+## Overview
+
+My WordPress theme for "AKABEKOMAIRI" at http://akabeko.me/blog.
+
+## License
+
+GNU General Public License v2 or later.
+http://www.gnu.org/licenses/gpl-2.0.html
