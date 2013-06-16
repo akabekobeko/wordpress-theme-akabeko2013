@@ -29,7 +29,7 @@ while( have_posts() ) : the_post(); ?>
 									 'link_before' => '<span>',
 									 'link_after' => '</span>',
 							  );
-						wp_link_pages($args); ?>
+						wp_link_pages( $args ); ?>
 
 				<!-- post navigation -->
 				<nav id="post-navigation">
@@ -43,11 +43,11 @@ while( have_posts() ) : the_post(); ?>
 
 			</article>
 			<!-- /post -->
-<?php endwhile; // 繰り返し処理終了
+<?php endwhile;
 else : ?>
 			<article class="post">
-				<h2>記事はありません</h2>
-				<p>お探しの記事は見つかりませんでした。</p>
+				<h2>No article found</h2>
+				<p>Article you are looking for was not found.</p>
 			</article>
 <?php endif; ?>
 
