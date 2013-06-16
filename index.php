@@ -5,7 +5,7 @@
 	<div id="primary">
 		<div id="content">
 
-<?php if( have_posts() ) :../../../../../../../../Applications/MAMP/htdocs/blog/wp-content/languages/ja.po
+<?php if( have_posts() ) :
 while( have_posts() ) : the_post(); ?>
 			<!-- post -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
