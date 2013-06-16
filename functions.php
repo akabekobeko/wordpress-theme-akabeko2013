@@ -9,11 +9,11 @@ add_theme_support( 'post-thumbnails' );
 
 // サイドバー登録
 register_sidebar(
-	array( 'name' => 'サイドバーウィジット-1',
-		   'id' => 'sidebar-1',
-		   'description' => 'サイドバーのウィジットエリアです。',
+	array( 'name'          => 'サイドバーウィジット-1',
+		   'id'            => 'sidebar-1',
+		   'description'   => 'サイドバーのウィジットエリアです。',
 		   'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		   'after_widget' => '</div>',
+		   'after_widget'  => '</div>',
 	)
 );
 
@@ -22,7 +22,8 @@ register_sidebar(
  *
  * @return コメント数。
  */
-function get_comment_only_number() {
+function get_comment_only_number()
+{
 	global $wpdb, $tablecomments, $post;
 	$comments = $wpdb->get_results("SELECT * FROM $wpdb->comments WHERE comment_post_ID = $post->ID AND comment_type NOT REGEXP '^(trackback|pingback)$' AND comment_approved = '1'");
 
@@ -36,7 +37,8 @@ function get_comment_only_number() {
  * @param $args
  * @param $depth
  */
-function mytheme_pings( $comment, $args, $depth ) {
+function mytheme_pings( $comment, $args, $depth )
+{
 	$GLOBALS['comment'] = $comment; ?>
 	<li><i class="icon-external-link-sign"></i> <?php echo comment_date(); ?> : <?php comment_author_link(); ?>
 <?php }
@@ -48,7 +50,8 @@ function mytheme_pings( $comment, $args, $depth ) {
  * @param $args
  * @param $depth
  */
-function mytheme_comment( $comment, $args, $depth ) {
+function mytheme_comment( $comment, $args, $depth )
+{
 	$GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 	<div id="comment-<?php comment_ID(); ?>" class="comment-body">
@@ -66,5 +69,25 @@ function mytheme_comment( $comment, $args, $depth ) {
 		</div>
 	</div>
 <?php }
+
+/**
+ * タグクラウドの表示を設定します。
+ *
+ * @param $args 現在の設定。
+ *
+ * @return 新しい設定。
+ */
+function mytheme_widget_tag_cloud_args( $args )
+{
+	$args = array(
+		'unit'     => 'em',
+		'number'   => 30,
+		'smallest' => 0.6,
+		'largest'  => 1.2
+	);
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'mytheme_widget_tag_cloud_args');
 
 ?>
