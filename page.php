@@ -20,11 +20,11 @@ while( have_posts() ) : the_post(); ?>
 				<?php comments_template(); ?>
 			</article>
 			<!-- /post -->
-<?php endwhile; // 繰り返し処理終了
+<?php endwhile;
 else : ?>
 			<article class="post">
-				<h2>記事はありません</h2>
-				<p>お探しの記事は見つかりませんでした。</p>
+				<h2>No page found</h2>
+				<p>Page you are looking for was not found.</p>
 			</article>
 <?php endif; ?>
 
