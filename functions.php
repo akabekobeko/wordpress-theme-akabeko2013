@@ -1,26 +1,27 @@
 <?php
 
-// ★コンテンツ幅の定義
-if( ! isset( $content_width ) ) { $content_width = 640; }
+load_theme_textdomain( 'akabeko2013', get_template_directory() . '/languages' );
 
-// ★「RSS 登録」、「投稿サムネイル」
-add_theme_support( 'automatic-feed-links' );
+// Require: Content width
+if( ! isset( $content_width ) ) { $content_width = 640; }add_theme_support( 'automatic-feed-links' );
+
+// Require: Post thumbnail
 add_theme_support( 'post-thumbnails' );
 
-// サイドバー登録
+// Require: Support sidebar
 register_sidebar(
-	array( 'name'          => 'サイドバーウィジット-1',
+	array( 'name'          => 'Sidebar',
 		   'id'            => 'sidebar-1',
-		   'description'   => 'サイドバーのウィジットエリアです。',
+		   'description'   => 'Suderbar area',
 		   'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		   'after_widget'  => '</div>',
 	)
 );
 
 /**
- * 記事のコメント数を取得します。
+ * Get the comments of the article.
  *
- * @return コメント数。
+ * @return comments.
  */
 function get_comment_only_number()
 {
@@ -31,11 +32,11 @@ function get_comment_only_number()
 }
 
 /**
- * 記事に対するピンバックを出力します。
+ * Output the pin-backs to the article.
  *
- * @param $comment コメント。
- * @param $args
- * @param $depth
+ * @param $comment Comment.
+ * @param $args    Default args.
+ * @param $depth   Defaukt depth.
  */
 function mytheme_pings( $comment, $args, $depth )
 {
@@ -44,11 +45,11 @@ function mytheme_pings( $comment, $args, $depth )
 <?php }
 
 /**
- * 記事に対するコメントを出力します。
+ * Output the comment to the article.
  *
- * @param $comment コメント。
- * @param $args
- * @param $depth
+ * @param $comment Comment.
+ * @param $args    Default args.
+ * @param $depth   Defaukt depth.
  */
 function mytheme_comment( $comment, $args, $depth )
 {
@@ -58,24 +59,24 @@ function mytheme_comment( $comment, $args, $depth )
 		<?php echo get_avatar( $comment->comment_author_email, 40 ); ?>
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link()) ?>
 		<?php if( $comment->comment_approved == '0') : ?>
-			<p class="wait">*このコメントはただいま承認待ちです*</p>
+			<p class="wait">*Pending*</p>
 		<?php endif; ?>
 		<div class="comment-meta">
 			<?php printf( __( '%1$s' ), get_comment_date() . ' ' . get_comment_time() ) ?><?php edit_comment_link( __( 'Edit' ),'  ','' ) ?>
 		</div>
 		<?php comment_text() ?>
 		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => '返信 <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
+			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
 		</div>
 	</div>
 <?php }
 
 /**
- * タグクラウドの表示を設定します。
+ * Customize the tag-cloud.
  *
- * @param $args 現在の設定。
+ * @param $args Default settings.
  *
- * @return 新しい設定。
+ * @return New settings.
  */
 function mytheme_widget_tag_cloud_args( $args )
 {
