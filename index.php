@@ -5,7 +5,7 @@
 	<div id="primary">
 		<div id="content">
 
-<?php if( have_posts() ) :
+<?php if( have_posts() ) :../../../../../../../../Applications/MAMP/htdocs/blog/wp-content/languages/ja.po
 while( have_posts() ) : the_post(); ?>
 			<!-- post -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,7 +16,7 @@ while( have_posts() ) : the_post(); ?>
 					<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
 				</div>
 
-				<?php the_content( '続きを読む...' ); ?>
+				<?php the_content( '(more...)' ); ?>
 
 				<div class="post-meta">
 					<i class="icon-folder-close" title="category"></i> <?php the_category( ', ' ); ?> 
@@ -24,11 +24,11 @@ while( have_posts() ) : the_post(); ?>
 				</div>
 			</article>
 			<!-- /post -->
-<?php endwhile; // 繰り返し処理終了
+<?php endwhile;
 else : ?>
 			<article class="post">
-				<h2>記事はありません</h2>
-				<p>お探しの記事は見つかりませんでした。</p>
+				<h2>No article found</h2>
+				<p>Article you are looking for was not found.</p>
 			</article>
 <?php endif; ?>
 
