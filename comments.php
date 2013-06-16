@@ -1,11 +1,11 @@
 <!-- comment-area -->
 <div id="comment-area">
 
-<?php if( have_comments() ): // コメントがあったら ?>
+<?php if( have_comments() ): ?>
 
 <?php $comments_cnt = get_comment_only_number(); ?>
 
-<!-- トラックバック -->
+<!-- Ping-back -->
 <?php if( get_comments_number() - $comments_cnt > 0 ) { ?>
 <h3>TRACKBACKS</h3>
 	<ol class="commets-list">
@@ -13,7 +13,7 @@
 	</ol>
 <?php } ?>
 
-<!-- コメント -->
+<!-- Comment -->
 <?php if( $comments_cnt > 0 ) { ?>
 <h3 id="comments">COMMENTS</h3>
 	<ol class="commets-list">
@@ -28,11 +28,11 @@
 
 <?php $args = array(
 	'title_reply' => 'REPLY',
-	'label_submit' => 'コメントを投稿する',
+	'label_submit' => 'Submit comment',
 	'fields' => array(
-		'author' => '<p class="comment-form-author"><i class="icon-user"></i> <label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="' . __( 'Name' ) . '" size="30"' . $aria_req . ' /></p>',
+		'author' => '<p class="comment-form-author"><i class="icon-user"></i> <label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="' . __( 'Name' ) . '" size="30" /></p>',
 
-		'email' => '<p class="comment-form-email"><i class="icon-envelope-alt"></i> <label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="' . __( 'Email' ) . '" size="30"' . $aria_req . ' /></p>',
+		'email' => '<p class="comment-form-email"><i class="icon-envelope-alt"></i> <label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="' . __( 'Email' ) . '" size="30" /></p>',
 
 		'url' => '<p id="comment-form-url"><i class="icon-globe"></i> <label for="url">' . __( 'Website' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="' . __( 'Website' ) . '" size="60" /></p>'
 	),

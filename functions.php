@@ -58,12 +58,12 @@ function mytheme_comment( $comment, $args, $depth )
 	<div id="comment-<?php comment_ID(); ?>" class="comment-body">
 		<?php echo get_avatar( $comment->comment_author_email, 40 ); ?>
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link()) ?>
-		<?php if( $comment->comment_approved == '0') : ?>
-			<p class="wait">*Pending*</p>
-		<?php endif; ?>
 		<div class="comment-meta">
 			<?php printf( __( '%1$s' ), get_comment_date() . ' ' . get_comment_time() ) ?><?php edit_comment_link( __( 'Edit' ),'  ','' ) ?>
 		</div>
+		<?php if( $comment->comment_approved == '0') : ?>
+			<p class="wait">*Pending*</p>
+		<?php endif; ?>
 		<?php comment_text() ?>
 		<div class="reply">
 			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
