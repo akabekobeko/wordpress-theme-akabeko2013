@@ -5,7 +5,7 @@ dynamic_sidebar( 'sidebar-1' );
 else: ?>
 <div class="widget">
 <h2>NO WIDGET</h2>
-<p>ウィジットは設定されていません。</p>
+<p>Widget is not set.</p>
 </div>
 <?php endif; ?>
 </div>
