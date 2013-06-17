@@ -3,18 +3,17 @@
 load_theme_textdomain( 'akabeko2013', get_template_directory() . '/languages' );
 
 // Require: Content width
-if( ! isset( $content_width ) ) { $content_width = 640; }add_theme_support( 'automatic-feed-links' );
+if( ! isset( $content_width ) ) { $content_width = 640; }
 
-// Require: Post thumbnail
+
+// Require: Feed, Post thumbnail, Sidebar
+add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
-
-// Require: Support sidebar
-register_sidebar(
-	array( 'name'          => 'Sidebar',
-		   'id'            => 'sidebar-1',
-		   'description'   => 'Suderbar area',
-		   'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		   'after_widget'  => '</div>',
+register_sidebar( array( 'name'          => __( 'Sidebar', 'akabeko2013' ),
+						 'id'            => 'sidebar-1',
+						 'description'   => __( 'Suderbar area', 'akabeko2013' ),
+						 'before_widget' => '<div id="%1$s" class="widget %2$s">',
+						 'after_widget'  => '</div>',
 	)
 );
 
@@ -26,7 +25,7 @@ register_sidebar(
 function get_comment_only_number()
 {
 	global $wpdb, $tablecomments, $post;
-	$comments = $wpdb->get_results("SELECT * FROM $wpdb->comments WHERE comment_post_ID = $post->ID AND comment_type NOT REGEXP '^(trackback|pingback)$' AND comment_approved = '1'");
+	$comments = $wpdb->get_results( "SELECT * FROM $wpdb->comments WHERE comment_post_ID = $post->ID AND comment_type NOT REGEXP '^(trackback|pingback)$' AND comment_approved = '1'" );
 
 	return count( $comments );
 }
@@ -59,14 +58,14 @@ function mytheme_comment( $comment, $args, $depth )
 		<?php echo get_avatar( $comment->comment_author_email, 40 ); ?>
 		<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link()) ?>
 		<div class="comment-meta">
-			<?php printf( __( '%1$s' ), get_comment_date() . ' ' . get_comment_time() ) ?><?php edit_comment_link( __( 'Edit' ),'  ','' ) ?>
+			<?php printf( '%1$s', get_comment_date() . ' ' . get_comment_time() ) ?><?php edit_comment_link( __( 'Edit', 'akabeko2013' ),'  ','' ) ?>
 		</div>
 		<?php if( $comment->comment_approved == '0') : ?>
-			<p class="wait">*Pending*</p>
+			<p class="wait"><?php _e( 'Pending', 'akabeko2013' ) ?></p>
 		<?php endif; ?>
 		<?php comment_text() ?>
 		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
+			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'akabeko2013' ) . ' <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
 		</div>
 	</div>
 <?php }

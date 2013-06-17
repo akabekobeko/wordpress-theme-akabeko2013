@@ -10,7 +10,7 @@ while( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<div class="post-meta">
-					<?php edit_post_link( __( 'Edit' ), '<i class="icon-edit"></i> ', '' ); ?> 
+					<?php edit_post_link( __( 'Edit', 'akabeko2013' ), '<i class="icon-edit"></i> ', '' ); ?> 
 					<i class="icon-calendar-empty"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span>
 					<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
 				</div>
@@ -23,8 +23,8 @@ while( have_posts() ) : the_post(); ?>
 <?php endwhile;
 else : ?>
 			<article class="post">
-				<h2>No page found</h2>
-				<p>Page you are looking for was not found.</p>
+				<h2><?php __( 'No pages found', 'akabeko2013' ); ?></h2>
+				<p><?php __( 'Pages you are looking for was not found.', 'akabeko2013' ); ?></p>
 			</article>
 <?php endif; ?>
 
