@@ -17,14 +17,20 @@ register_sidebar( array( 'name'          => __( 'Sidebar', 'akabeko2013' ),
 						 'id'            => 'sidebar-1',
 						 'description'   => __( 'Suderbar area', 'akabeko2013' ),
 						 'before_widget' => '<div id="%1$s" class="widget %2$s">',
-						 'after_widget'  => '</div>',
-	)
+						 'after_widget'  => '</div>' )
 );
 
 // Reccomended: Custom background
 add_theme_support( 'custom-background',
 					array( 'default-color' => 'efefef',
-						   'default-image' => get_template_directory_uri() . '/images/page-back.png',) 
+						   'default-image' => get_template_directory_uri() . '/images/page-back.png' )
+);
+
+// Reccomended: Custom header
+add_theme_support( 'custom-header',
+					array( 'width'         => 32,
+						   'height'        => 32,
+						   'header-text'   => false )
 );
 
 /**
