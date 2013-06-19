@@ -23,6 +23,7 @@ Activiation and use:
 == Change Log ==
 
 = 1.1 =
+* Supported: Custom header
 * Supported: Custom background
 * Supported: Text domain
 * Fixed: Load stylesheet by using wp_enqueue_style
