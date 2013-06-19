@@ -6,15 +6,25 @@ load_theme_textdomain( 'akabeko2013', get_template_directory() . '/languages' );
 if( ! isset( $content_width ) ) { $content_width = 640; }
 
 
-// Require: Feed, Post thumbnail, Sidebar
+// Reccomended: Feed
 add_theme_support( 'automatic-feed-links' );
+
+// Reccomended: Post thumbnail
 add_theme_support( 'post-thumbnails' );
+
+// Reccomended: Sidebar
 register_sidebar( array( 'name'          => __( 'Sidebar', 'akabeko2013' ),
 						 'id'            => 'sidebar-1',
 						 'description'   => __( 'Suderbar area', 'akabeko2013' ),
 						 'before_widget' => '<div id="%1$s" class="widget %2$s">',
 						 'after_widget'  => '</div>',
 	)
+);
+
+// Reccomended: Custom background
+add_theme_support( 'custom-background',
+					array( 'default-color' => 'efefef',
+						   'default-image' => get_template_directory_uri() . '/images/page-back.png',) 
 );
 
 /**

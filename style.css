@@ -80,10 +80,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
                  Common
  **************************************/
 
-body {
-	background: repeat url('images/page-back.png') #EFEFEF;
-}
-
 table {
 	margin: 1em 0;
 	width: 100%;
