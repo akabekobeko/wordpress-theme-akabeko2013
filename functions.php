@@ -44,6 +44,9 @@ function mytheme_stylesheets()
 	wp_enqueue_style( 'font-awesome',     '//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css' );
 	wp_enqueue_style( 'font-awesome-ie7', '//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome-ie7.min.css' );
 	$GLOBALS[ 'wp_scripts' ]->add_data( 'font-awesome-ie7', 'conditional', 'IE 7' );
+
+	wp_enqueue_style( 'normalize',         get_template_directory_uri() . '/normalize.css' );
+	wp_enqueue_style( 'akabeko2013-style', get_stylesheet_uri() );
 }
 add_action( 'wp_print_styles', 'mytheme_stylesheets' );
 

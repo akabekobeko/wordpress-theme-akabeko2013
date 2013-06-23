@@ -16,7 +16,7 @@ while( have_posts() ) : the_post(); ?>
 					<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
 				</div>
 
-				<?php the_content( '(more...)' ); ?>
+				<?php the_content( __( '(more...)' ) ); ?>
 
 				<div class="post-meta">
 					<i class="icon-folder-close" title="category"></i> <?php the_category( ', ' ); ?> 
