@@ -541,3 +541,7 @@ p {
 	border: solid 1px #AAA;
 }
 
+img#wpstats {
+	display:none;
+}
+
