@@ -284,7 +284,7 @@ a:hover {
 	width:80%;
 }
 
-.post {
+.type-post, .type-page {
 	margin-bottom: 1em;
 }
 
@@ -309,17 +309,17 @@ a:hover {
 	color: #34495E;
 }
 
-.post h2 {
+.type-post h2, .type-page h2 {
 	padding-left: 8px;
 	border-left: 16px solid #c0392b;
 }
 
-.post h3 {
+.type-post h3, .type-page h3 {
 	padding-left: 8px;
 	border-left: 16px double #c0392b;
 }
 
-.post h4 {
+.type-post h4, .type-page h4 {
 	padding-left: 8px;
 	border-left: 5px solid #c0392b;
 }
