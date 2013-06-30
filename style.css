@@ -108,7 +108,7 @@ td+td, th+th {
 }
 
 blockquote {
-	padding: 1em;
+	padding: 0 1em;
 	border: 2px solid #34495E;
 	border-radius: 6px;
 	background: none #F4F6F6;
@@ -326,6 +326,8 @@ a:hover {
 
 p {
 	letter-spacing: 0.05em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 #post-navigation {
