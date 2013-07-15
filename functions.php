@@ -114,9 +114,9 @@ function mytheme_widget_tag_cloud_args( $args )
 {
 	$args = array(
 		'unit'     => 'em',
-		'number'   => 30,
-		'smallest' => 0.6,
-		'largest'  => 1.2
+		'number'   => 20,
+		'smallest' => 0.8,
+		'largest'  => 0.8
 	);
 
 	return $args;

@@ -462,13 +462,13 @@ p {
 	margin: 0.2em 0.1em;
 	padding:0.2em 0.6em;
 	border-radius: 4px;
-	background: none #95a5a6;
+	background: none #3498db;
 	color: #FFF;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.05em;
 }
 
 .tagcloud a:hover {
-	background: none #7f8c8d;
+	background: none #2980b9;
 	text-decoration: none;
 }
 
