@@ -86,12 +86,11 @@ table {
 
 th {
 	padding: 0.3em 0.5em;
-	background: none #7f8c8d;
-	color: #FEFEFE;
+	background: none #bdc3c7;
 }
 
 tr:nth-child(even) th {
-	background: none #95a5a6;
+	background: none #ced5d9;
 }
 
 td {
