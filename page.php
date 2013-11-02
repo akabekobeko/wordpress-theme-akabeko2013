@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div id="main">
-	<div id="primary">
-		<div id="content-single">
+<div class="page-main">
+	<div class="page-primary">
+		<div class="page-content-single">
 
 <?php if( have_posts() ) :
 while( have_posts() ) : the_post(); ?>

@@ -1,5 +1,5 @@
 <!-- comment-area -->
-<div id="comment-area">
+<div class="comment-area">
 
 <?php if( have_comments() ): ?>
 

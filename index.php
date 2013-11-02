@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <!-- main -->
-<div id="main">
-	<div id="primary">
-		<div id="content">
+<div class="page-main">
+	<div class="page-primary">
+		<div class="page-content">
 
 <?php if( have_posts() ) :
 while( have_posts() ) : the_post(); ?>
@@ -33,7 +33,7 @@ else : ?>
 <?php endif; ?>
 
 			<!-- post navigation -->
-			<nav id="post-navigation">
+			<nav class="post-navigation">
 				<div class="alignleft"><?php previous_posts_link( '<i class=" icon-chevron-sign-left icon-large"></i> PREV' ); ?></div>
 				<div class="alignright"><?php next_posts_link( 'NEXT <i class=" icon-chevron-sign-right icon-large"></i>' ); ?></div>
 				<div class="clear"></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html <?php language_attributes();?>>
 <head>
 	<meta charset="UTF-8">
@@ -10,9 +10,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="container">
+<div class="container">
 	<!-- header -->
-	<header id="header">
+	<header class="page-header">
 		<div class="site-branding">
 			<h1 class="site-title">
 				<?php if( get_header_image() ) : ?>
@@ -22,7 +22,7 @@
 			</h1>
 			<h2 class="site-description"><?php bloginfo('description'); ?></h2>
 		</div>
-		<nav id="site-navigation">
+		<nav class="site-navigation">
 <?php get_search_form(); ?>
 <?php wp_nav_menu( array ( 'theme_location' => 'header-navi' ) ); ?>
 		</nav>

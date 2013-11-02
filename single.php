@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <!-- main -->
-<div id="main">
-	<div id="primary">
-		<div id="content-single">
+<div class="page-main">
+	<div class="page-primary">
+		<div class="page-content-single">
 
 <?php if( have_posts() ) :
 while( have_posts() ) : the_post(); ?>
@@ -32,7 +32,7 @@ while( have_posts() ) : the_post(); ?>
 						wp_link_pages( $args ); ?>
 
 				<!-- post navigation -->
-				<nav id="post-navigation">
+				<nav class="post-navigation">
 					<div class="alignleft"><?php previous_post_link( '%link', '<i class=" icon-chevron-sign-left icon-large"></i> %title'); ?></div>
 					<div class="alignright"><?php next_post_link( '%link', '%title <i class=" icon-chevron-sign-right icon-large"></i>'); ?></div>
 					<div class="clear"></div>
