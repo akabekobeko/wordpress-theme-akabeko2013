@@ -4,7 +4,7 @@ Theme URI: http://akabeko.me/
 Author: Akabeko
 Author URI: http://akabeko.me/
 Description: This theme is for akabeko's blog.
-Version: 1.2
+Version: 1.3
 Tags: red, one-column, two-columns, right-sidebar, flexible-width
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,37 +14,37 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
                  Layout
  **************************************/
 
-#container {
+.container {
 	color: #34495E;
 }
 
-#header {
+.page-header {
 	padding:0.5em;
 	background: none #c0392b;
 }
 
-#main {
+.page-main {
 	clear:both;
 }
 
-#primary {
+.page-primary {
 	float: left;
 	margin: 0 -26.4% 0 0;
 	width: 100%;
 }
 
-#content {
+.page-content {
 	margin: 0 30% 0 4%;
 	width:66%;
 }
 
-#secondary {
+.page-secondary {
 	float:right;
 	margin-right: 4%;
 	width: 22.4%;
 }
 
-#footer {
+.page-footer {
 	clear: both;
 	padding: 1em 2em;
 	background: none #c0392b;
@@ -55,18 +55,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 @media screen and (max-width: 480px) {
-	#primary {
+	.page-primary {
 		clear: both;
 		margin: 0;
 		width: 100%;
 	}
 	
-	#content {
+	.page-content {
 		margin: 1.5em;
 		width:auto;
 	}
 
-	#secondary {
+	.page-secondary {
 		clear: both;
 		margin: 1.5em;
 		width:auto;
@@ -79,7 +79,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 table {
 	margin: 1em 0;
-	width: 100%;
 	border: 2px solid #34495E;
 	border-collapse: collapse;
 }
@@ -173,27 +172,27 @@ a:hover {
 }
 
 /* メニューなど */
-#site-navigation {
+.site-navigation {
 	float: right;
 	margin: 0.5em 0 0 0;
 }
 
-#site-navigation .menu {
+.site-navigation .menu {
 	clear: both;
 }
 
-#site-navigation ul {
+.site-navigation ul {
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
 }
 
-#site-navigation li {
+.site-navigation li {
 	position: relative;
 	float:left;
 }
 
-#site-navigation a {
+.site-navigation a {
 	display: block;
 	padding: 0 1.2125em;
 	color: #eee;
@@ -204,7 +203,7 @@ a:hover {
 	line-height: 2em;
 }
 
-#site-navigation ul ul {
+.site-navigation ul ul {
 	position: absolute;
 	top: 1.6em;
 	left: 0;
@@ -215,11 +214,11 @@ a:hover {
 	width: 188px;
 }
 
-#site-navigation ul ul ul {
+.site-navigation ul ul ul {
 	top: 0;
 	left: -100%;
 }
-#site-navigation ul ul a {
+.site-navigation ul ul a {
 	padding: 10px 10px;
 	width: 168px;
 	height: auto;
@@ -230,30 +229,29 @@ a:hover {
 	font-size: 0.8em;
 	line-height: 1.4em;
 }
-#site-navigation li:hover > a,
-#site-navigation ul ul :hover > a,
-#site-navigation a:focus {
+.site-navigation li:hover > a,
+.site-navigation ul ul :hover > a,
+.site-navigation a:focus {
 	background: #efefef;
 }
 
-#site-navigation li:hover > a,
-#site-navigation a:focus {
+.site-navigation li:hover > a,
+.site-navigation a:focus {
 	background: #e74c3c;
 }
-#site-navigation ul li:hover > ul {
+.site-navigation ul li:hover > ul {
 	display: block;
 }
 
-#site-searchform {
+.site-searchform {
 	float: right;
 	clear: both;
 	margin-bottom: 0.4em;
-	width: 16em;
 	background: #FFF;
+	padding: .1em 0 0.1em .5em;
 }
 
-#site-searchform input[type="text"] {
-	padding: 0.2em 0.5em;
+.site-searchform input[type="text"] {
 	width:16em;
 	border:none;
 	background: #FFF;
@@ -261,12 +259,12 @@ a:hover {
 	font-size: 0.8em;
 }
 
-#site-searchform input[type="text"]:focus {
+.site-searchform input[type="text"]:focus {
 	border: none;
 	color: #444;
 }
 
-#site-searchsubmit {
+.site-searchsubmit {
 	width: 2em;
 	border: none;
 	background: none;
@@ -278,8 +276,8 @@ a:hover {
                  Post
  **************************************/
 
-#content-single {
-	padding: 0 10%;
+.page-content-single {
+	margin: 0 10%;
 	width:80%;
 }
 
@@ -331,27 +329,27 @@ p {
 	margin-bottom: 1.5em;
 }
 
-#post-navigation {
+.post-navigation {
 	margin: 2em 0;
 	border: 2px solid #34495e;
 }
 
-#post-navigation div {
+.post-navigation div {
 	width: 50%;
 }
 
-#post-navigation a {
+.post-navigation a {
 	display: block;
 	padding: 1em 0.5em;
 	color: #34495e;
 }
 
-#post-navigation .alignright a {
+.post-navigation .alignright a {
 	border-left: 2px solid #34495e;
 	text-align: right;
 }
 
-#post-navigation a:hover {
+.post-navigation a:hover {
 	background: none #2c3e50;
 	color: #FFF;
 	text-decoration: none;
@@ -362,7 +360,7 @@ p {
                  Comment
  **************************************/
 
-#comment-area h3 {
+.comment-area h3 {
 	margin: 3em 0 1em 0;
 }
 
@@ -370,7 +368,7 @@ p {
 	font-weight: bold;
 }
 
-#comment-area ul, #comment-area ol {
+.comment-area ul, .comment-area ol {
 	list-style: none;
 }
 
@@ -411,8 +409,8 @@ p {
 	text-align: center;
 }
 
-#commentform input[type='text'],
-#commentform textarea {
+.comment-form input[type='text'],
+.comment-form textarea {
 	display: block;
 	padding: 0.2em;
 	max-width: 100%;
@@ -421,7 +419,7 @@ p {
 	color: #444;
 }
 
-#commentform input[type='submit'] {
+.comment-form input[type='submit'] {
 	padding: 0.2em;
 	width: 20em;
 	border: 1px solid #34495e;
@@ -434,12 +432,12 @@ p {
 
 }
 
-#commentform input[type='submit']:hover {
+.comment-form input[type='submit']:hover {
 	border: 1px solid #2c3e50;
 	background: none #2c3e50;
 }
 
-#commentform p {
+.comment-form p {
 	text-indent: 0;
 }
 
@@ -452,7 +450,7 @@ p {
                  Sidebar
  **************************************/
 
-#secondary ul, #secondary ol {
+.page-secondary ul, .page-secondary ol {
 	margin-left: 0;
 	padding-left: 1em;
 }
@@ -481,7 +479,7 @@ p {
 	text-indent: 0;
 }
 
-#profile_image {
+.profile_image {
 	text-align: center;
 }
 
@@ -494,11 +492,11 @@ p {
                  Footer
  **************************************/
 
-#footer a {
+.page-footer a {
 	color: #FFF;
 }
 
-#footer i {
+.page-footer i {
 	color: #FFF;
 }
 
