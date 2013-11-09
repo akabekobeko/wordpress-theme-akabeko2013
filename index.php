@@ -14,8 +14,7 @@ while( have_posts() ) : the_post(); ?>
 					<div class="post-meta">
 						<i class="icon-calendar-empty"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span>
 						<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
-					</div>
-					<div class="post-meta">
+						<br>
 						<i class="icon-folder-close" title="category"></i> <?php the_category( ', ' ); ?> 
 						<i class="icon-tags" title="tags"></i> <?php the_tags( '', ', ' ); ?>
 					</div>
