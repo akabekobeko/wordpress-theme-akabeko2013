@@ -4,7 +4,7 @@ Theme URI: http://akabeko.me/blog
 Author: Akabeko
 Author URI: http://akabeko.me
 Description: This theme is for akabeko's blog.
-Version: 1.1
+Version: 1.3
 Tags: red, one-column, two-columns, right-sidebar, flexible-width
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,14 @@ Activiation and use:
 2. See Appearance -> Theme Options to change theme specific options
 
 == Change Log ==
+
+= 1.3 =
+* Chnaged: Theme design
+
+= 1.2 =
+* Fixed: Problems heading style is not reflected in the single page
+* Fixed: Problems that appear to have the smiley mark
+* Chnaged: Theme design
 
 = 1.1 =
 * Supported: Custom header

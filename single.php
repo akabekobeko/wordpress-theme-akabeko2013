@@ -9,21 +9,21 @@
 while( have_posts() ) : the_post(); ?>
 			<!-- post -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-				<div class="post-meta">
-					<?php edit_post_link( __( 'Edit', 'akabeko2013' ), '<i class="icon-edit"></i> ', '' ); ?> 
-					<i class="icon-calendar-empty"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span> 
-					<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
+				<div class="post-header">
+					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<div class="post-meta">
+						<?php edit_post_link( __( 'Edit', 'akabeko2013' ), '<i class="icon-edit"></i> ', '' ); ?> 
+						<i class="icon-calendar-empty"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span>
+						<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
+						<br>
+						<i class="icon-folder-close" title="category"></i> <?php the_category( ', ' ); ?> 
+						<i class="icon-tags" title="tags"></i> <?php the_tags( '', ', ' ); ?>
+					</div>
 				</div>
 
 				<?php the_post_thumbnail(); ?>
 				<?php the_content(); ?>
 
-				<div class="post-meta">
-					<i class="icon-folder-close" title="category"></i> <?php the_category( ', ' ); ?> 
-					<i class="icon-tags" title="tags"></i> <?php the_tags( '', ', ' ); ?>
-				</div>
-				
 				<?php $args = array( 'before' => '<div class="page-link">',
 									 'after' => '</div>',
 									 'link_before' => '<span>',
