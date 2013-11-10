@@ -171,10 +171,6 @@ a:hover {
 	font-size: 0.8em;
 }
 
-<<<<<<< HEAD
-/* メニューなど */
-=======
->>>>>>> develop
 .site-navigation {
 	float: right;
 	margin: 0.5em 0 0 0;
@@ -436,32 +432,18 @@ p {
 }
 
 .comment-form input[type='submit'] {
-<<<<<<< HEAD
-	padding: 0.2em;
-	width: 20em;
-	border: 1px solid #34495e;
-	border-radius: 4px;
-	background: none #34495e;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
-=======
 	padding: .5em 2em;
 	background: none #3498db;
 	border: 1px solid #3498db;
 	border-radius: .2em;
->>>>>>> develop
 	color: #FEFEFE;
 	font-weight: bold;
 
 }
 
 .comment-form input[type='submit']:hover {
-<<<<<<< HEAD
-	border: 1px solid #2c3e50;
-	background: none #2c3e50;
-=======
 	background: none #2980b9;
 	border: 1px solid #2980b9;
->>>>>>> develop
 }
 
 .comment-form p {
