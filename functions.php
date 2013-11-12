@@ -41,10 +41,7 @@ add_theme_support( 'custom-header',
  */
 function mytheme_stylesheets()
 {
-	wp_enqueue_style( 'font-awesome',     '//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css' );
-	wp_enqueue_style( 'font-awesome-ie7', '//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome-ie7.min.css' );
-	$GLOBALS[ 'wp_scripts' ]->add_data( 'font-awesome-ie7', 'conditional', 'IE 7' );
-
+	wp_enqueue_style( 'font-awesome',     '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' );
 	wp_enqueue_style( 'normalize',         get_template_directory_uri() . '/normalize.css' );
 	wp_enqueue_style( 'akabeko2013-style', get_stylesheet_uri() );
 }
@@ -73,7 +70,7 @@ function get_comment_only_number()
 function mytheme_pings( $comment, $args, $depth )
 {
 	$GLOBALS['comment'] = $comment; ?>
-	<li><i class="icon-external-link-sign"></i> <?php echo comment_date(); ?> : <?php comment_author_link(); ?>
+	<li><i class="fa fa-external-link-square"></i> <?php echo comment_date(); ?> : <?php comment_author_link(); ?>
 <?php }
 
 /**
@@ -98,7 +95,7 @@ function mytheme_comment( $comment, $args, $depth )
 		<?php endif; ?>
 		<?php comment_text() ?>
 		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'akabeko2013' ) . ' <i class="icon-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
+			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'akabeko2013' ) . ' <i class="fa fa-reply"></i>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
 		</div>
 	</div>
 <?php }

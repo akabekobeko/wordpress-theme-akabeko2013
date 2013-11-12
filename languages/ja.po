@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: akabeko2013\n"
-"POT-Creation-Date: 2013-08-25 18:01+0900\n"
-"PO-Revision-Date: 2013-08-25 18:01+0900\n"
+"POT-Creation-Date: 2013-11-12 23:25+0900\n"
+"PO-Revision-Date: 2013-11-12 23:25+0900\n"
 "Last-Translator: \n"
 "Language-Team: Akabeko\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../comments.php:30 ../functions.php:101
+#: ../comments.php:30 ../functions.php:98
 msgid "Reply"
 msgstr "返信"
 
@@ -46,36 +46,36 @@ msgstr "サイドバー"
 msgid "Suderbar area"
 msgstr "サイドバー エリア"
 
-#: ../functions.php:92
+#: ../functions.php:89
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: ../functions.php:94 ../index.php:14 ../page.php:13 ../single.php:14
+#: ../functions.php:91 ../page.php:13 ../single.php:13
 msgid "Edit"
 msgstr "編集"
 
-#: ../functions.php:97
+#: ../functions.php:94
 msgid "Pending"
 msgstr "承認待ち"
 
-#: ../index.php:19
+#: ../index.php:21
 msgid "(more...)"
 msgstr "（続きを読む…）"
 
-#: ../index.php:30 ../single.php:49
+#: ../index.php:28 ../single.php:45
 msgid "No posts found"
 msgstr "記事が見つかりません"
 
-#: ../index.php:31 ../single.php:50
+#: ../index.php:29 ../single.php:46
 msgid "Posts you are looking for was not found."
 msgstr "お探しの記事は見つかりませんでした。"
 
-#: ../page.php:26
+#: ../page.php:27
 msgid "No pages found"
 msgstr "ページが見つかりません"
 
-#: ../page.php:27
+#: ../page.php:28
 msgid "Pages you are looking for was not found."
 msgstr "お探しのページは見つかりませんでした。"
 
