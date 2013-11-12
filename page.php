@@ -6,14 +6,13 @@
 
 <?php if( have_posts() ) :
 while( have_posts() ) : the_post(); ?>
-			<!-- post -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="post-header">
 					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<div class="post-meta">
-						<?php edit_post_link( __( 'Edit', 'akabeko2013' ), '<i class="icon-edit"></i> ', '' ); ?> 
-						<i class="icon-calendar-empty"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span>
-						<i class="icon-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
+						<?php edit_post_link( __( 'Edit', 'akabeko2013' ), '<i class="fa fa-pencil-square"></i> ', '' ); ?> 
+						<i class="fa fa-clock-o"></i> <span class="post-date"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></span>
+						<i class="fa fa-comment"></i> <span class="comment-num"><?php comments_popup_link( '0','1','%','','-' ); ?></span>
 					</div>
 				</div>
 
@@ -21,7 +20,7 @@ while( have_posts() ) : the_post(); ?>
 
 				<?php comments_template(); ?>
 			</article>
-			<!-- /post -->
+
 <?php endwhile;
 else : ?>
 			<article class="post">
@@ -30,8 +29,8 @@ else : ?>
 			</article>
 <?php endif; ?>
 
-		</div><!-- /content-single -->
-	</div><!-- /primary -->
-</div><!-- /main -->
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>
